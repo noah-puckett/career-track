@@ -1,9 +1,9 @@
-const http = require("http");
-const url = require("url");
+var http = require("http");
+var url = require("url");
     
 function start(route, handle) {
     function onRequest(request, response) {
-        const pathName = url.parse(request.url).pathName;
+        var pathName = url.parse(request.url).pathName;
         console.log("Request for " + pathName + " Received!");
 
         route(handle, pathName);
